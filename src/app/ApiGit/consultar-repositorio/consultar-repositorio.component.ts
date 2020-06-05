@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiGitService }     from '../ApiGit.service';
 import { Repositorio }       from '../Repositorio';
-import { Perfil }            from '../perfil';
+import { Perfil }            from '../Perfil';
 import { ActivatedRoute }    from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component }         from '@angular/core';
 import { ApiGitService }     from '../ApiGit.service';
-import { Perfil }            from '../perfil';
+import { Perfil }            from '../Perfil';
 
 @Component({
   selector: 'app-consultar-perfil',

@@ -1,6 +1,6 @@
 import { Injectable }  from '@angular/core';
 import { HttpClient }  from '@angular/common/http';
-import { Perfil }      from './perfil';
+import { Perfil }      from './Perfil';
 import { Observable }  from 'rxjs';
 import { Repositorio } from './Repositorio';
 
