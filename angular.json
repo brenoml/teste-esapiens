@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AppGit"
+    }
+  },
+  "defaultProject": "AppGit",
+  "cli": {
+    "analytics": "f830c190-458c-4a6f-ab1e-3f15a1f47c3b"
+  }
 }

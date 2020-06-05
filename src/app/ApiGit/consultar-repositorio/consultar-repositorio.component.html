@@ -1,0 +1,29 @@
+<h1>Consulta de Repositórios</h1>
+
+<input type="text"(keyup)="pesquisarRepositorios($event)" >
+
+<div *ngIf="numeroTotalPaginas != 0" class="espaco-rodape">
+  <div class="grid-quatro-coluna">
+    <button class="btn-paginacao" (click)='diminuirPagina()' [disabled]="numeroPagina == 1" > < </button>
+    <h3>{{numeroPagina}}</h3>
+    <button class="btn-paginacao" (click)="aumentarPagina()" [disabled]="numeroPagina >= numeroTotalPaginas">></button>
+    <button class="btn-paginacao" *ngIf="ordenacaoDesc == true" (click)="alterarOrdenacao()" >Desc</button>
+    <button class="btn-paginacao" *ngIf="ordenacaoDesc == false"  (click)="alterarOrdenacao()">Asc</button>
+  </div>
+  <div *ngFor="let repositorio of repositorios" class="repositorio">
+    <h4>{{repositorio.name}}</h4>
+    <h5>{{repositorio.description}}</h5>
+    <div class="grid-tres-coluna">
+      <h5><b>Linguagem:</b> {{repositorio.language}}</h5>
+      <h5><b>Visualizações:</b> {{repositorio.watchers_count}}</h5>
+      <h5><b>Estrelas:</b> {{repositorio.stargazers_count}}</h5>
+      <h5><b>Criado em:</b>{{repositorio.created_at | date: 'dd/MM/yyyy hh:mm'}}</h5>
+      <h5><b>última alteração:</b>{{repositorio.updated_at | date: 'dd/MM/yyyy hh:mm'}}</h5>
+      <h5><a href="{{repositorio.html_url}}" target="_blank">Abrir repositório</a></h5>
+    </div>
+  </div>
+</div>
+
+<div class="mensagem-sem-retorno"  *ngIf="numeroTotalPaginas == 0 ">
+  Não foi encontrado repositório com este nome de usuário...
+</div>

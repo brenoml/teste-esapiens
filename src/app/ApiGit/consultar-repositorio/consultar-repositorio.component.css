@@ -1,0 +1,78 @@
+table{
+  margin: 10%;
+  background-color:#161411;
+}
+
+tr{
+  border: solid 1px black;
+  background-color: #a6b4d1;
+}
+thead tr {    
+  background-color: #8694b1;
+}
+.grid-quatro-coluna {    
+  padding: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 300px;
+  align-items: center;
+  margin: auto;
+}  
+
+.btn-paginacao {
+  background-color: #4cccf1;
+  color: white;
+  border: 2px solid rgb(83, 110, 168);
+  border-radius: 0.6em;  
+  cursor: pointer;
+  padding: 1em 2em;
+  transition: background-color 300ms ease-in-out;
+  margin: auto;
+  display: flex;
+}
+
+.btn-paginacao:hover,
+.btn-paginacao:focus {  
+  background-color: #126ca1;
+}
+
+.grid-quatro-coluna h3{
+  text-align: center;
+}
+
+.grid-tres-coluna {    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: initial;
+  margin: auto;
+}  
+
+.repositorio {
+  width: 600px;
+  align-items: center;
+  margin: auto;
+  border-bottom: solid 2px #6c6c6c;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 10px;
+  margin: 8px;
+}
+
+h4, a{
+  color: #328cc1;
+}
+
+.espaco-rodape { 
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 700px) {      
+  .repositorio {
+      width: 360px;
+      align-items: center;
+      margin: auto;
+      border-bottom: solid 2px #6c6c6c;
+  }
+}

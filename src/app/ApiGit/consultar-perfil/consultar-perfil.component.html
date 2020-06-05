@@ -1,0 +1,35 @@
+<h1>Consulta de Perfil</h1>
+
+<input type="text" (keyup)="pesquisar($event)" placeholder="Digite o perfil:">
+<button class="btn" [routerLink]="['/consultarRepositorio', perfil.login]"  [disabled]="perfil.login == '' ">Ver repositórios</button>
+
+<div *ngIf="perfil.login != '' " class="cartao">
+  <div class="cartao-img">
+    <img src="{{perfil.avatar_url}}" width="60px" height="60px">
+  </div>
+  <div class="cartao-informacoes">
+    <h5>Oi, eu sou o/a <b> {{perfil.login}} </b>! </h5>
+    <h5><b>bio:</b> {{perfil.bio}}</h5>
+    <h5><b>e-mail:</b> {{perfil.email}}</h5>
+    <h5><b>Criado em:</b> {{perfil.created_at | date: 'dd/MM/yyyy'}}</h5>
+    <h5><b>Última alteção:</b> {{perfil.updated_at | date: 'dd/MM/yyyy'}}</h5>
+  </div>
+
+  <div class="cartao-numeros">
+    <div class="numeros">
+      <div class="value"> {{perfil.public_repos}}</div>
+      <div class="type">Repositorios</div>
+    </div>
+    <div class="numeros">
+      <div class="value"> {{perfil.followers}}</div>
+      <div class="type">Seguidores</div>
+    </div>
+    <div class="numeros">
+      <div class="value"> {{perfil.following}}</div>
+      <div class="type">Seguindo</div>
+    </div>
+  </div>
+</div>
+<div class="mensagem-sem-retorno" *ngIf="perfil.login == ''">
+  Não foi encontrado usuário com este nome...
+</div>

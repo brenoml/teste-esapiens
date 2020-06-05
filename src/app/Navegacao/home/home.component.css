@@ -1,0 +1,101 @@
+.grid-duas-colunas {    
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.linhaUmEsquerda {
+  margin-bottom: 15%;
+  border-radius: 5px;
+}
+.linhaUmDireita{
+  border-radius: 12px;
+  margin: 0% 10% 0% 10%;
+}
+.linhaDoisEsquerda{
+  margin: 55px 10% 15% 10%;
+}
+.linhaDoisDireita{    
+  margin-bottom: 15%;
+  border-radius: 15px;
+}
+
+.linhaDoisEsquerda h3 {
+  margin-bottom: 50px;
+}
+
+h2, h1 {
+  color: #328cc1;
+}
+
+h2, h4 {
+  margin: 5%;
+}
+
+h5 {
+  color: #666;
+  margin: 3% 5% 3% 5%;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out, font-size 300ms ease-in-out;
+}
+
+h5:hover,
+h5:focus {
+  font-size: 16px;
+  color: #328cc1;
+}  
+
+.circulo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: #328CC1;
+  animation: SobeDesce 2.2s infinite linear both;
+  position: relative;
+  margin: 0 auto;
+}
+
+.circulo img{
+  width: 70%;
+  transform: translate(24px, 24px);
+}
+
+@keyframes SobeDesce {
+  0%   {top: 0px;}
+  25%  {top: 10px;}
+  50%  {top: 20px;}
+  75%  {top: 10px;}
+  100% {top: 0px;}
+}
+
+.repositorio {
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+.btn {
+  box-sizing: border-box;
+  background-color: #328cc1;
+  color: white;
+  border: 2px solid rgb(50, 34, 105);
+  border-radius: 0.6em;  
+  cursor: pointer;
+  padding: 1.2em 2.8em;
+  transition: font-size 300ms ease-in-out, background-color 300ms ease-in-out;
+  margin: auto;
+  display: flex;
+}
+.btn:hover,
+.btn:focus {  
+  font-size: 16px;
+  background-color: #126ca1;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-duas-colunas {    
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+}

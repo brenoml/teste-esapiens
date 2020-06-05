@@ -1,0 +1,60 @@
+.cartao {
+  width: 280px;
+  height: 450px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px;
+  font-family: roboto;
+  text-align: center;
+  align-self: center;
+  margin: 40px auto 100px auto;
+} 
+
+.cartao-img {
+  background-color: #328CC1;
+  height: 110px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.cartao-img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transform: translateY(70px);
+}
+
+.cartao-informacoes {
+  padding-top: 40px;
+  height: 250px;
+  background-color:#EFEFEF;
+}
+
+
+.cartao-numeros {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #328CC1;
+}
+
+.cartao-numeros .numeros:hover {
+  background-color: #326CA1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.cartao-numeros .numeros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+}
+
+h5 {
+  font-weight: 500;
+}
