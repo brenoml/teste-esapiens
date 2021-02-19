@@ -13,7 +13,7 @@ export class ApiGitService {
   protected UrlService: string = "https://api.github.com/";    
 
   headers = {
-     "Authorization" : "Token 3f6dfc9a3fb6ca619d8e0f0db0796744818503d4"
+     "Authorization" : "Token ae8871a0cdbd3f01738173ff866757b20b59b3c1"
   };   
 
   PesquisarPerfil(nome: string) : Observable<Perfil>{
