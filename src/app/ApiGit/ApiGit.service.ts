@@ -13,13 +13,9 @@ export class ApiGitService {
   protected UrlService: string = "https://api.github.com/";    
 
   headers = {
-     "Authorization" : "Token 08d12c8ca21f14935989e29850d80d10bd8e948e"
   };   
 
   PesquisarPerfil(nome: string) : Observable<Perfil>{
-
-// this.http.post("https://github.com/login/oauth/08d12c8ca21f14935989e29850d80d10bd8e948e", null);
-
     return this.http.get<Perfil>(this.UrlService + "users/" + nome,
     {headers : this.headers})
   }    
